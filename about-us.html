@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | larpress.Digital</title>
+
+  <meta
+    name="description"
+    content="Learn more about larpress.Digital — a modern Laravel CMS & application starter kit built for speed, scalability, and developer productivity."
+  >
+
+  <meta name="author" content="larpress.Digital">
+  <meta name="robots" content="index, follow">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">
+        About larpress.Digital
+      </h1>
+      <p class="text-xl text-gray-600">
+        A modern Laravel CMS & application starter kit built for developers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who We Are -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Who We Are</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          larpress.Digital is a modern Laravel CMS & application starter kit
+          designed to help developers and businesses build scalable,
+          production-ready web applications faster.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          It combines the power of Laravel, FilamentPHP, and Tailwind CSS
+          into a clean, modular, and developer-friendly system.
+        </p>
+      </div>
+
+      <div class="bg-purple-50 rounded-2xl p-8 border border-purple-100">
+        <ul class="space-y-3 text-gray-700">
+          <li>✅ Laravel 11.x foundation</li>
+          <li>✅ FilamentPHP v4 admin panel</li>
+          <li>✅ Modular & scalable architecture</li>
+          <li>✅ Clean UI & developer experience</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow border">
+        <h3 class="text-2xl font-bold mb-3">Our Mission</h3>
+        <p class="text-gray-600 leading-relaxed">
+          To simplify Laravel development by providing a powerful CMS
+          and starter kit that reduces setup time and increases productivity
+          without compromising quality.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow border">
+        <h3 class="text-2xl font-bold mb-3">Our Vision</h3>
+        <p class="text-gray-600 leading-relaxed">
+          To empower developers worldwide to focus on building great products
+          instead of repeating the same boilerplate work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-12">Why Choose larpress.Digital?</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-xl border shadow-sm">
+          <h4 class="font-bold text-lg mb-2">Developer Focused</h4>
+          <p class="text-gray-600">
+            Clean codebase, modern tools, and modular system.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border shadow-sm">
+          <h4 class="font-bold text-lg mb-2">Production Ready</h4>
+          <p class="text-gray-600">
+            Security, performance, and scalability built-in.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border shadow-sm">
+          <h4 class="font-bold text-lg mb-2">Open & Flexible</h4>
+          <p class="text-gray-600">
+            Open-source friendly and easy to extend.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4">
+        Build Faster with larpress.Digital
+      </h2>
+      <p class="text-lg mb-8">
+        Start your next Laravel project with a powerful CMS and modern architecture.
+      </p>
+      <a
+        href="https://doc.larpress.digital/"
+        class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition"
+      >
+        View Documentation
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Header / Footer Loader -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("./partials/header.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("header").innerHTML = html;
+        });
+
+      fetch("./partials/footer.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("footer").innerHTML = html;
+        });
+    });
+  </script>
+
+</body>
+</html>
