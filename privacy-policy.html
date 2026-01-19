@@ -87,6 +87,10 @@
             background-clip: text;
         }
 
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
         /* Dark Mode Styles */
         body.dark-mode {
             background-color: #0a0a0a;
@@ -160,8 +164,28 @@
 
 <body class="bg-white text-gray-900 dark-mode">
 
-    <!-- HEADER -->
-    <div id="header"></div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html">
+                        <img src="./src/logo/larpress-logo.svg" alt="larpress.Digital" class="h-10">
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#features" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Features</a>
+                    <a href="index.html#admin" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Admin Panel</a>
+                    <a href="index.html#installation" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Installation</a>
+                    <a href="index.html#pricing" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Pricing</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://doc.larpress.digital/" class="text-gray-700 hover:text-purple-600 transition-colors font-medium">Documentation</a>
+                    <a href="index.html" class="gradient-bg text-white px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition-opacity">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- PAGE HEADER -->
     <header class="pt-32 pb-12 bg-gradient-to-br from-purple-50 via-white to-indigo-50">
@@ -254,7 +278,52 @@
     </main>
 
     <!-- Footer -->
-    <div id="footer"></div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img src="./src/logo/larpress-logo.svg" alt="larpress.Digital" class="h-8">
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs">Modern Laravel CMS & application starter kit — built for speed and developer happiness.</p>
+                </div>
+                <div>
+                    <h4 class="text-gray-200 font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#features" class="hover:text-white">Features</a></li>
+                        <li><a href="index.html#admin" class="hover:text-white">Admin Panel</a></li>
+                        <li><a href="index.html#installation" class="hover:text-white">Installation</a></li>
+                        <li><a href="index.html#pricing" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gray-200 font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about-us.html" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-gray-200 font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html" class="hover:text-white">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:text-white">License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                <p>&copy; 2024 larpress.Digital. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="privacy-policy.html" class="hover:text-white">Privacy</a>
+                    <a href="terms-and-conditions.html" class="hover:text-white">Terms</a>
+                    <a href="#" class="hover:text-white">Status</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- Dark Mode Toggle Button -->
@@ -314,22 +383,6 @@
                     target.focus({ preventScroll: true });
                 }
             });
-        });
-    </script>
-    <!-- Header / Footer Loader -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("./partials/header.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("header").innerHTML = html;
-                });
-
-            fetch("./partials/footer.html")
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById("footer").innerHTML = html;
-                });
         });
     </script>
 
